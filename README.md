@@ -1,5 +1,5 @@
 <h1 align="center">
-Icônes
+manfromexistence-icons
 </h1>
 
 <p align="center">Icon Explorer with <b>Instant</b> searching, powered by <a href="https://github.com/iconify/iconify" target="_blank">Iconify</a> </p>
@@ -42,7 +42,7 @@ Icônes
 - Categories filters
 - Dark mode
 - Built with [Vite](https://github.com/vitejs/vite) and Vue 3
-  - If you like how it's built - try [🏕 Vitesse](https://github.com/antfu/vitesse), an opinionated starter template made from Icônes
+  - If you like how it's built - try [🏕 Vitesse](https://github.com/antfu/vitesse), an opinionated starter template made from manfromexistence-icons
 
 ### Community
 
