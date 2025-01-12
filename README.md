@@ -53,6 +53,6 @@ manfromexistence-icons
 - Electron client (Coming!)
 - Full-offline mode - pack all the icons
 
-## License
+<!-- ## License
 
-MIT - Anthony Fu 2020
+MIT - Anthony Fu 2020 -->
