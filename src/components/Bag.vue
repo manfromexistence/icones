@@ -12,10 +12,12 @@ const showPackOption = ref(false)
 
 function clear() {
   // eslint-disable-next-line no-alert
-  if (confirm('Are you sure to remove all icons from the bag?')) {
-    clearBag()
-    emit('close')
-  }
+  // if (confirm('Are you sure to remove all icons from the bag?')) {
+  //   clearBag()
+  //   emit('close')
+  // }
+  clearBag()
+  emit('close')
 }
 
 async function packIconFont() {
@@ -42,11 +44,9 @@ async function PackSvgs(type: PackType = 'svg') {
 
 <template>
   <div class="h-full flex flex-col w-screen md:w-96 xl:w-128">
-    <div
-      class="
+    <div class="
         py-3 px-6 flex flex-none border-b border-base
-      "
-    >
+      ">
       <div>
         <NavPlaceholder class="md:hidden" />
         <div class="text-lg">
@@ -66,11 +66,9 @@ async function PackSvgs(type: PackType = 'svg') {
         <Icons :icons="bags" @select="(e: any) => $emit('select', e)" />
       </div>
 
-      <div
-        v-show="showPackOption"
-        class="relative flex-none border-t border-base py-3 px-6 text-2xl opacity-75"
-      >
-        <IconButton class="absolute top-0 right-0 p-3 text-2xl flex-none leading-none" icon="carbon:close" @click="showPackOption = false" />
+      <div v-show="showPackOption" class="relative flex-none border-t border-base py-3 px-6 text-2xl opacity-75">
+        <IconButton class="absolute top-0 right-0 p-3 text-2xl flex-none leading-none" icon="carbon:close"
+          @click="showPackOption = false" />
         <button class="btn small mr-1 mb-1 opacity-75" @click="PackSvgs('svg')">
           SVG
         </button>
@@ -88,14 +86,15 @@ async function PackSvgs(type: PackType = 'svg') {
         </button>
       </div>
 
-      <div
-        class="
+      <div class="
           flex-none border-t border-base py-3 px-6 text-2xl opacity-75
-        "
-      >
-        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:download" text="Download Zip" :active="true" @click="showPackOption = true" />
-        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:function" text="Generate Icon Fonts" :active="true" @click="packIconFont" />
-        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:apps" text="Download SVG Sprite" :active="true" @click="packSVGSprite" />
+        ">
+        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:download" text="Download Zip"
+          :active="true" @click="showPackOption = true" />
+        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:function" text="Generate Icon Fonts"
+          :active="true" @click="packIconFont" />
+        <IconButton class="p-1 cursor-pointer hover:text-primary" icon="carbon:apps" text="Download SVG Sprite"
+          :active="true" @click="packSVGSprite" />
       </div>
     </template>
 
